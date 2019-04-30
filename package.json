@@ -1,0 +1,24 @@
+{
+	"name": "smartsupp-eslint",
+	"version": "0.1.0",
+	"description": "Smartsupp eslint config",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/smartsupp/smartsupp-eslint.git"
+	},
+	"keywords": [
+		"eslint",
+		"config",
+		"smartsupp"
+	],
+	"author": "Ondřej Janošík <ondrej.janosik@notum.cz>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/smartsupp/smartsupp-eslint/issues"
+	},
+	"homepage": "https://github.com/smartsupp/smartsupp-eslint#readme",
+	"peerDependencies": {
+		"eslint": ">= 3"
+	}
+}

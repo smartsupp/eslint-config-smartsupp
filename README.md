@@ -1,0 +1,1 @@
+# Smartsupp eslint config
