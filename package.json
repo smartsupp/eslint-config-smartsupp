@@ -1,5 +1,5 @@
 {
-	"name": "smartsupp-eslint",
+	"name": "eslint-config-smartsupp",
 	"version": "0.1.0",
 	"description": "Smartsupp eslint config",
 	"main": "index.js",
