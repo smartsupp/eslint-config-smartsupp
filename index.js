@@ -202,7 +202,6 @@ module.exports = {
 			plugins: ['@typescript-eslint/eslint-plugin'],
 			rules: {
 				'@typescript-eslint/ban-types': 2,
-				'@typescript-eslint/class-name-casing': 2,
 				'@typescript-eslint/no-unused-vars': [
 					1,
 					{
