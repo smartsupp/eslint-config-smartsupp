@@ -99,7 +99,7 @@ module.exports = {
 			'error',
 			{
 				cases: { camelCase: true, pascalCase: true },
-				ignore: /.*\.spec.ts/
+				ignore: [/.*\.spec.ts/]
 			}
 		],
 		// Allow using fn references: [].filter(someFilterFn)
