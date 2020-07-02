@@ -94,8 +94,14 @@ module.exports = {
 			},
 		],
 		'unicorn/consistent-function-scoping': 'off',
-		// Filename should be camel case or pascal case
-		'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true } }],
+		// Filename should be camel case or pascal case, ignore for test files
+		'unicorn/filename-case': [
+			'error',
+			{
+				cases: { camelCase: true, pascalCase: true },
+				ignore: /.*\.spec.ts/
+			}
+		],
 		// Allow using fn references: [].filter(someFilterFn)
 		'unicorn/no-fn-reference-in-iterator': 'off',
 		// Allow using null
