@@ -190,6 +190,12 @@ module.exports = {
 				markers: ['global', 'eslint'],
 			},
 		],
+		'@typescript-eslint/unbound-method': [
+			"error",
+			{
+				"ignoreStatic": true
+			}
+		]
 	},
 	overrides: [
 		{
@@ -198,8 +204,16 @@ module.exports = {
 			parserOptions: {
 				ecmaVersion: 2018,
 				sourceType: 'module',
+				warnOnUnsupportedTypeScriptVersion: true,
 			},
 			plugins: ['@typescript-eslint/eslint-plugin'],
+			extends: [
+				'plugin:@typescript-eslint/recommended-requiring-type-checking',
+				'plugin:@typescript-eslint/recommended-requiring-type-checking',
+				'plugin:promise/recommended',
+				'plugin:unicorn/recommended',
+				'plugin:prettier/recommended',
+			],
 			rules: {
 				'@typescript-eslint/ban-types': 2,
 				'@typescript-eslint/no-unused-vars': [
