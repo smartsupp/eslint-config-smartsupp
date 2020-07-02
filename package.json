@@ -19,7 +19,6 @@
 	},
 	"homepage": "https://github.com/smartsupp/smartsupp-eslint#readme",
 	"dependencies": {
-		"eslint-plugin-prettier": "3.1.4",
 		"eslint-plugin-unicorn": "20.1.0",
 		"eslint-plugin-promise": "4.2.1"
 	},

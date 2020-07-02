@@ -210,10 +210,8 @@ module.exports = {
 			plugins: ['@typescript-eslint/eslint-plugin'],
 			extends: [
 				'plugin:@typescript-eslint/recommended-requiring-type-checking',
-				'plugin:@typescript-eslint/recommended-requiring-type-checking',
 				'plugin:promise/recommended',
 				'plugin:unicorn/recommended',
-				'plugin:prettier/recommended',
 			],
 			rules: {
 				'@typescript-eslint/ban-types': 2,
