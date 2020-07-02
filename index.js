@@ -195,6 +195,23 @@ module.exports = {
 			{
 				"ignoreStatic": true
 			}
+		],
+		'unicorn/consistent-function-scoping': 'off',
+		// Filename should be camel case or pascal case
+		'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true } }],
+		// Allow using fn references: [].filter(someFilterFn)
+		'unicorn/no-fn-reference-in-iterator': 'off',
+		// Allow using null
+		'unicorn/no-null': 'off',
+		// Allow using reduce fn
+		'unicorn/no-reduce': 'off',
+		// Not using abbreviations is too restrictive
+		'unicorn/prevent-abbreviations': 'off',
+		'unicorn/catch-error-name': [
+			'error',
+			{
+				name: 'err'
+			}
 		]
 	},
 	overrides: [
