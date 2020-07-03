@@ -244,6 +244,7 @@ module.exports = {
 						"ignoreStatic": true
 					}
 				],
+				'@typescript-eslint/prefer-regexp-exec': 'off'
 			},
 		},
 	],
