@@ -232,6 +232,8 @@ module.exports = {
 				'unicorn/no-reduce': 'off',
 				// Not using abbreviations is too restrictive
 				'unicorn/prevent-abbreviations': 'off',
+				// Allow using process.exit() in bootstrap
+				'unicorn/no-process-exit': 'off',
 				'unicorn/catch-error-name': [
 					'error',
 					{
@@ -244,7 +246,8 @@ module.exports = {
 						"ignoreStatic": true
 					}
 				],
-				'@typescript-eslint/prefer-regexp-exec': 'off'
+				'@typescript-eslint/prefer-regexp-exec': 'off',
+
 			},
 		},
 	],
