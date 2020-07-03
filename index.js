@@ -248,7 +248,7 @@ module.exports = {
 					}
 				],
 				'@typescript-eslint/prefer-regexp-exec': 'off',
-
+				"jest/consistent-test-it": ["error", { "fn": "test", "withinDescribe": "test" }],
 			},
 		},
 	],
