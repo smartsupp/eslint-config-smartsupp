@@ -206,6 +206,7 @@ module.exports = {
 				'plugin:@typescript-eslint/recommended-requiring-type-checking',
 				'plugin:promise/recommended',
 				'plugin:unicorn/recommended',
+				'plugin:jest/recommended'
 			],
 			rules: {
 				'@typescript-eslint/ban-types': 2,
