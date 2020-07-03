@@ -75,7 +75,10 @@ module.exports = {
 		'no-sequences': 2, // https://eslint.org/docs/rules/no-sequences
 		'no-throw-literal': 2, // https://eslint.org/docs/rules/no-throw-literal
 		'no-with': 2, // https://eslint.org/docs/rules/no-with
-		'radix': 2, // https://eslint.org/docs/rules/radix
+		'radix': [
+			2,
+			'as-needed'
+		], // https://eslint.org/docs/rules/radix
 		'vars-on-top': 0, // https://eslint.org/docs/rules/vars-on-top
 		'wrap-iife': [2, 'any'], // https://eslint.org/docs/rules/wrap-iife
 		'yoda': 2, // https://eslint.org/docs/rules/yoda
