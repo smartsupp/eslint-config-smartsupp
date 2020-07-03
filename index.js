@@ -247,6 +247,12 @@ module.exports = {
 					}
 				],
 				'@typescript-eslint/prefer-regexp-exec': 'off',
+				"@typescript-eslint/no-misused-promises": [
+					"error",
+					{
+						"checksVoidReturn": false
+					}
+				]
 
 			},
 		},
