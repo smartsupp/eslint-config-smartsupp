@@ -37,7 +37,7 @@ module.exports = {
 		 * Best practices
 		 */
 		'consistent-return': 2, // https://eslint.org/docs/rules/consistent-return
-		curly: [2, 'multi-line'], // https://eslint.org/docs/rules/curly
+		'curly': [2, 'multi-line'], // https://eslint.org/docs/rules/curly
 		'default-case': 2, // https://eslint.org/docs/rules/default-case
 		'dot-notation': [
 			2,
@@ -46,7 +46,7 @@ module.exports = {
 				allowKeywords: true,
 			},
 		],
-		eqeqeq: 2, // https://eslint.org/docs/rules/eqeqeq
+		'eqeqeq': 2, // https://eslint.org/docs/rules/eqeqeq
 		'guard-for-in': 2, // https://eslint.org/docs/rules/guard-for-in
 		'no-caller': 2, // https://eslint.org/docs/rules/no-caller
 		'no-eq-null': 2, // https://eslint.org/docs/rules/no-eq-null
@@ -75,10 +75,10 @@ module.exports = {
 		'no-sequences': 2, // https://eslint.org/docs/rules/no-sequences
 		'no-throw-literal': 2, // https://eslint.org/docs/rules/no-throw-literal
 		'no-with': 2, // https://eslint.org/docs/rules/no-with
-		radix: 2, // https://eslint.org/docs/rules/radix
+		'radix': 2, // https://eslint.org/docs/rules/radix
 		'vars-on-top': 0, // https://eslint.org/docs/rules/vars-on-top
 		'wrap-iife': [2, 'any'], // https://eslint.org/docs/rules/wrap-iife
-		yoda: 2, // https://eslint.org/docs/rules/yoda
+		'yoda': 2, // https://eslint.org/docs/rules/yoda
 		'prefer-const': [
 			2,
 			{
@@ -91,7 +91,7 @@ module.exports = {
 		/**
 		 * Style
 		 */
-		indent: [
+		'indent': [
 			2,
 			'tab',
 			{
@@ -106,7 +106,7 @@ module.exports = {
 				allowSingleLine: true,
 			},
 		],
-		quotes: [
+		'quotes': [
 			2,
 			'single',
 			{
@@ -169,7 +169,7 @@ module.exports = {
 			},
 		],
 		'one-var': [2, 'never'], // https://eslint.org/docs/rules/one-var
-		semi: [2, 'never'], // https://eslint.org/docs/rules/semi
+		'semi': [2, 'never'], // https://eslint.org/docs/rules/semi
 		'keyword-spacing': 2, // https://eslint.org/docs/rules/keyword-spacing
 		'space-before-blocks': 2, // https://eslint.org/docs/rules/space-before-blocks
 		'space-before-function-paren': [
@@ -196,10 +196,18 @@ module.exports = {
 			files: ['*.ts', '*.tsx'],
 			parser: '@typescript-eslint/parser',
 			parserOptions: {
+				project: ['./tsconfig.json'],
 				ecmaVersion: 2018,
 				sourceType: 'module',
+				warnOnUnsupportedTypeScriptVersion: true,
 			},
 			plugins: ['@typescript-eslint/eslint-plugin'],
+			extends: [
+				'plugin:@typescript-eslint/recommended-requiring-type-checking',
+				'plugin:promise/recommended',
+				'plugin:unicorn/recommended',
+				'plugin:jest/recommended'
+			],
 			rules: {
 				'@typescript-eslint/ban-types': 2,
 				'@typescript-eslint/no-unused-vars': [
@@ -208,6 +216,39 @@ module.exports = {
 						argsIgnorePattern: '^_',
 					},
 				],
+				'unicorn/consistent-function-scoping': 'off',
+				// Filename should be camel case or pascal case, ignore for test files
+				'unicorn/filename-case': [
+					'error',
+					{
+						cases: { camelCase: true, pascalCase: true },
+						ignore: [/.*\.spec.ts/]
+					}
+				],
+				// Allow using fn references: [].filter(someFilterFn)
+				'unicorn/no-fn-reference-in-iterator': 'off',
+				// Allow using null
+				'unicorn/no-null': 'off',
+				// Allow using reduce fn
+				'unicorn/no-reduce': 'off',
+				// Not using abbreviations is too restrictive
+				'unicorn/prevent-abbreviations': 'off',
+				// Allow using process.exit() in bootstrap
+				'unicorn/no-process-exit': 'off',
+				'unicorn/catch-error-name': [
+					'error',
+					{
+						name: 'err'
+					}
+				],
+				'@typescript-eslint/unbound-method': [
+					"error",
+					{
+						"ignoreStatic": true
+					}
+				],
+				'@typescript-eslint/prefer-regexp-exec': 'off',
+				"jest/consistent-test-it": ["error", { "fn": "test", "withinDescribe": "test" }],
 			},
 		},
 	],
